@@ -1,26 +1,56 @@
 # Covid_Deaths_Data
-📊 Overview
-This project involves an in-depth exploration of global COVID-19 data using SQL. The primary objective is to analyze the pandemic's impact across different countries and continents by examining case numbers, death rates, and vaccination progress. The project follows a structured approach to data analysis, encompassing data cleaning, exploration, and deriving actionable insights. 
-🎯 Objectives
-•	Calculate daily death percentages and infection rates.
-•	Identify countries with the highest infection and death rates.
-•	Analyze vaccination progress globally.
-•	Utilize advanced SQL techniques such as window functions, CTEs, and temporary tables.
-🛠️ Tools & Technologies
-•	SQL: For data querying and analysis.
-•	Microsoft SQL Server: As the SQL client for executing queries.
-•	Our World in Data COVID-19 Dataset: The dataset used for this project. 
-📁 Data Source
-The dataset comprises historical COVID-19 data, including details such as total cases, total deaths, population, and vaccination numbers. The data is publicly available and can be accessed from Our World in Data. 
-🔍 Data Exploration Process
-1.	Data Cleaning:
-o	Handled missing values and ensured consistency in date formats.
-2.	Exploratory Data Analysis (EDA):
-o	Calculated death percentages by dividing total deaths by total cases.
-o	Determined infection rates by dividing total cases by population.
-o	Identified countries with the highest infection and death rates.
-o	Analyzed continent-level data to find regions with the highest death counts. 
-3.	Advanced SQL Techniques:
-o	Used window functions to calculate rolling totals of new vaccinations.
-o	Employed Common Table Expressions (CTEs) to structure complex queries.
-o	Created temporary tables to store intermediate results for further analysis.
+# 🦠 COVID-19 Global Impact Analysis
+
+## 📊 Overview
+
+This project analyzes the global impact of COVID-19 using SQL for data exploration and Tableau for interactive visualizations. The data is sourced from [Our World in Data](https://ourworldindata.org/covid-deaths) and includes global figures on cases, deaths, population, and vaccinations. The project highlights infection rates, death percentages, and vaccination rollouts, enabling insight into how different regions were affected.
+
+---
+
+## 🛠️ Tools & Technologies
+
+- **SQL (T-SQL in Microsoft SQL Server)** – data extraction, joins, CTEs, and temp tables  
+- **Tableau** – visualization dashboard  
+- **Our World in Data** – COVID-19 dataset
+
+---
+
+## 🔍 Key Analysis Queries & Insights
+
+### 1. **Total Cases vs Total Deaths**
+- Computed death percentage by country and date
+- ✅ *Insight:* Countries like the U.S. and India had high total cases, but smaller death percentages relative to other nations.
+
+### 2. **Total Cases vs Population**
+- Measured infection rate per country
+- ✅ *Insight:* Some smaller nations had high infection percentages (e.g., Gibraltar, Andorra), even if total case counts were lower.
+
+### 3. **Highest Infection & Death Rates**
+- Identified countries with the highest:
+  - Total infections
+  - Infection % relative to population
+  - Death% relative to population
+- ✅ *Insight:* Countries in Europe and South America had higher death rates; densely populated countries showed broader spread.
+
+### 4. **Continent-level Death Totals**
+- Aggregated total deaths by continent
+- ✅ *Insight:* Europe and North America had the highest overall death counts.
+
+### 5. **Global Trends Over Time**
+- Tracked new cases, deaths, and calculated daily death percentages
+- ✅ *Insight:* Peak death rates often lagged behind spikes in new cases, confirming expected epidemiological trends.
+
+### 6. **Vaccination Rollout**
+- Joined vaccination and death datasets
+- Calculated rolling totals of people vaccinated
+- ✅ *Insight:* Vaccination coverage varied greatly, with some countries nearing 100% population coverage while others remained below 10%.
+
+---
+
+## 📈 Tableau Dashboard Visuals - https://public.tableau.com/app/profile/sanika.keshav.shinde8472/viz/CovidDashboard_17463728376340/CovidDashboard
+
+- **KPI Cards:** Total new cases, total new deaths, global death percentage  
+- **Map:** Deaths by continent  
+- **Bar Chart:** % population infected per country  
+- **Line Chart with Forecast:** Infection percentage trends and projections  
+
